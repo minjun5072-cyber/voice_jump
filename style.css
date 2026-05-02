@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#scoreBoard {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+#rankingBox {
+    width: 320px;
+    margin: 20px auto;
+    background: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+#rankingList {
+    list-style: none;
+    padding: 0;
+}
+
+#rankingList li {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+#game {
+    width: 90%;
+    max-width: 800px;
+    height: 300px;
+    border: 3px solid black;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+#background {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: repeating-linear-gradient(
+        to right,
+        #ffffff,
+        #ffffff 120px,
+        #fafafa 120px,
+        #fafafa 240px
+    );
+    animation: bgMove 8s linear infinite;
+}
+
+@keyframes bgMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#countdown {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: bold;
+    z-index: 5;
+    display: none;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+#obstacle {
+    width: 40px;
+    height: 60px;
+    background: black;
+    position: absolute;
+    right: -300px;
+    bottom: 0;
+    z-index: 2;
+}
+
+button {
+    padding: 14px 28px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    #game {
+        height: 250px;
+    }
+
+    #player {
+        width: 40px;
+        height: 40px;
+    }
+
+    #obstacle {
+        width: 35px;
+        height: 50px;
+    }
+
+    button {
+        width: 80%;
+        font-size: 20px;
+    }
+
+    #countdown {
+        font-size: 60px;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    background: white;
+    width: 320px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#rankingList {
+    list-style: none;
+    padding: 0;
+}
+
+#rankingList li {
+    margin: 12px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+.my-rank {
+    background: #d8ffd8;
+    border: 2px solid #4caf50;
+    border-radius: 10px;
+    padding: 8px;
+}

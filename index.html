@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소리 점프 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>소리 점프 게임</h1>
+
+    <input
+        id="playerName"
+        type="text"
+        placeholder="이름 입력"
+        maxlength="10"
+    >
+
+    <button id="startBtn">게임 시작</button>
+    <button id="restartBtn" style="display:none;">다시 시작</button>
+    <button id="rankBtn">랭킹 보기</button>
+
+    <div id="scoreBoard">
+        점수: <span id="score">0</span>
+        |
+        최고 점수: <span id="bestScore">0</span>
+    </div>
+
+    <p>크게 소리 지르면 더 높이 점프!</p>
+
+    <div id="game">
+        <div id="background"></div>
+        <div id="countdown">3</div>
+        <div id="player"></div>
+        <div id="obstacle"></div>
+    </div>
+
+    <p id="status">대기 중...</p>
+
+    <!-- 랭킹 모달 -->
+    <div id="rankModal" class="modal">
+        <div class="modalContent">
+            <h2>랭킹 TOP 10</h2>
+            <ul id="rankingList"></ul>
+            <button id="closeRankBtn">닫기</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
